@@ -1,0 +1,2 @@
+toto je testovací text
+toto je druhý řádek nějakého náhodného textu
