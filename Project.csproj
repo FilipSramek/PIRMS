@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Drivers\" />
+    <PackageReference Include="System.IO.Ports" Version="9.0.3" />
   </ItemGroup>
 
 </Project>
