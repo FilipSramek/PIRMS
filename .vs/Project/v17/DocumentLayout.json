@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|c:\\users\\filip\\synologydrive\\v\u0161b-tuo\\p\u0159edm\u011Bty\\pirms - prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\project\\pirms\\main\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|solutionrelative:main\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|c:\\users\\filip\\synologydrive\\v\u0161b-tuo\\p\u0159edm\u011Bty\\pirms - prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\project\\pirms\\main\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|solutionrelative:main\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|c:\\users\\filip\\synologydrive\\v\u0161b-tuo\\p\u0159edm\u011Bty\\pirms - prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\project\\pirms\\main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|solutionrelative:main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|c:\\users\\filip\\synologydrive\\v\u0161b-tuo\\p\u0159edm\u011Bty\\pirms - prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\project\\pirms\\drivers\\savedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|solutionrelative:drivers\\savedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|c:\\users\\filip\\synologydrive\\v\u0161b-tuo\\p\u0159edm\u011Bty\\pirms - prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\project\\pirms\\project.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|solutionrelative:project.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\Main\\MainForm.cs",
+              "RelativeDocumentMoniker": "Main\\MainForm.cs",
+              "ToolTip": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\Main\\MainForm.cs",
+              "RelativeToolTip": "Main\\MainForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T11:52:18.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\Main\\MainForm.cs",
+              "RelativeDocumentMoniker": "Main\\MainForm.cs",
+              "ToolTip": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\Main\\MainForm.cs [Design]",
+              "RelativeToolTip": "Main\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T11:35:56.31Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\Main\\Program.cs",
+              "RelativeDocumentMoniker": "Main\\Program.cs",
+              "ToolTip": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\Main\\Program.cs",
+              "RelativeToolTip": "Main\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T11:33:03.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Project",
+              "DocumentMoniker": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\Project.csproj",
+              "RelativeDocumentMoniker": "Project.csproj",
+              "ToolTip": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\Project.csproj",
+              "RelativeToolTip": "Project.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-26T11:32:47.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SaveData.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\Drivers\\SaveData.cs",
+              "RelativeDocumentMoniker": "Drivers\\SaveData.cs",
+              "ToolTip": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\Drivers\\SaveData.cs",
+              "RelativeToolTip": "Drivers\\SaveData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T11:30:59.671Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
