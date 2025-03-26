@@ -10,45 +10,32 @@ namespace Project.Drivers
 {
     class Serial
     {
-        public class Data
-        {
-            int id;
-            double time;
-            double value;
-        }
-
-        Data data = new Data();
         SerialPort serial = new SerialPort();
 
         //TO-DO:Implement serial port selector
-        //      Implement serial port bouldrate selector
+        //      Implement serial port bouldrate 
 
+
+        /// <summary>
+        /// Initialize serial port
+        /// </summary>
+        /// <param name="port"></param>
+        /// <param name="bouldRate"></param>
         public void Initialize(string port, int bouldRate)
         {
-
             serial.PortName = port;
-            serial.BaudRate = bouldRate;    
-            serial.Open();
+            serial.BaudRate = bouldRate;
         }
 
+        /// <summary>
+        /// Read data from serial port
+        /// </summary>
+        /// <returns>String with data</returns>
         public string ReadData()
         {
-            string data = serial.ReadLine();
-
+            string data = serial.ReadExisting(); 
             return data;
         }
-        public bool ReadParseData(string data)
-        {
-            
-
-            return true;
-            
-            
-        }
-        private void ParseData()
-        {
-            //TO-DO: Implement data parsing
-
-        }
+        
     }
 }

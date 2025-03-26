@@ -11,6 +11,9 @@ namespace Project.Main
         [STAThread]
         static void Main()
         {
+            Serial serial = new Serial();
+            serial.Initialize("COM1", 9600);
+
 
 
             ApplicationConfiguration.Initialize();
