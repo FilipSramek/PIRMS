@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using static Project.Drivers.Serial;
 
@@ -10,21 +11,6 @@ namespace Project.Drivers
     //TO-DO:Implement serial port data parser  FINISHED
     //      Implement serial port data buffer
     //      Write a actual data format to parser
-
-    /// <summary>
-    /// Object that holds the data from the sensor
-    /// </summary>
-    public class SensorData
-    {
-        public int Id { get; set; }
-        public DateTime Time { get; set; }
-        public double Value { get; set; } 
-
-        public override string ToString()
-        {
-            return $"ID: {Id}, Time: {Time}, Value: {Value}"; //override ToString to return the things that are relevant to me
-        }
-    }
 
     /// <summary>
     /// Parser for the sensor data, child of SensorData
