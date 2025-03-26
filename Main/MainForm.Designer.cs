@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            timerZeroPointOneHz = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // MainForm
@@ -42,5 +44,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer timerZeroPointOneHz;
     }
 }
