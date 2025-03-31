@@ -8,13 +8,12 @@ using System.Threading.Tasks;
 
 namespace Project.Drivers
 {
-    class Serial
+    class Serial : SerialPort
     {
-        SerialPort serial = new SerialPort();
-
-        //TO-DO:Implement serial port selector
-        //      Implement serial port bouldrate 
-
+        public override string ToString()
+        {
+            return $"Port: {this.PortName}; BouldRate: {this.BaudRate}";
+        }
 
         /// <summary>
         /// Initialize serial port
@@ -23,8 +22,8 @@ namespace Project.Drivers
         /// <param name="bouldRate"></param>
         public void Initialize(string port, int bouldRate)
         {
-            serial.PortName = port;
-            serial.BaudRate = bouldRate;
+            this.PortName = port;
+            this.BaudRate = bouldRate;
         }
 
         /// <summary>
@@ -33,9 +32,8 @@ namespace Project.Drivers
         /// <returns>String with data</returns>
         public string ReadData()
         {
-            string data = serial.ReadExisting(); 
+            string data = this.ReadExisting(); 
             return data;
-        }
-        
+        }      
     }
 }

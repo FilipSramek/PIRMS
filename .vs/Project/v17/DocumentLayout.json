@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|c:\\users\\filip\\synologydrive\\v\u0161b-tuo\\p\u0159edm\u011Bty\\pirms - prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\project\\pirms\\drivers\\parser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|solutionrelative:drivers\\parser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|c:\\users\\filip\\synologydrive\\v\u0161b-tuo\\p\u0159edm\u011Bty\\pirms - prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\project\\pirms\\drivers\\sensordata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|solutionrelative:drivers\\sensordata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\main\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|solutionrelative:main\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|c:\\users\\filip\\synologydrive\\v\u0161b-tuo\\p\u0159edm\u011Bty\\pirms - prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\project\\pirms\\main\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|solutionrelative:main\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|c:\\users\\filip\\synologydrive\\v\u0161b-tuo\\p\u0159edm\u011Bty\\pirms - prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\project\\pirms\\main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|solutionrelative:main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|c:\\users\\filip\\synologydrive\\v\u0161b-tuo\\p\u0159edm\u011Bty\\pirms - prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\project\\pirms\\drivers\\serial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|solutionrelative:drivers\\serial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|c:\\users\\filip\\synologydrive\\v\u0161b-tuo\\p\u0159edm\u011Bty\\pirms - prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\project\\pirms\\main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|solutionrelative:main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|c:\\users\\filip\\synologydrive\\v\u0161b-tuo\\p\u0159edm\u011Bty\\pirms - prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\project\\pirms\\drivers\\parser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E1FB40B-021E-41CF-A779-DDD0AE819208}|Project.csproj|solutionrelative:drivers\\parser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +34,83 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Parser.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\Drivers\\Parser.cs",
-              "RelativeDocumentMoniker": "Drivers\\Parser.cs",
-              "ToolTip": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\Drivers\\Parser.cs",
-              "RelativeToolTip": "Drivers\\Parser.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACQAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T16:09:00.788Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Serial.cs",
               "DocumentMoniker": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\Drivers\\Serial.cs",
               "RelativeDocumentMoniker": "Drivers\\Serial.cs",
               "ToolTip": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\Drivers\\Serial.cs",
               "RelativeToolTip": "Drivers\\Serial.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T12:58:59.252Z",
+              "WhenOpened": "2025-03-26T18:33:51.803Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\Main\\MainForm.cs",
+              "RelativeDocumentMoniker": "Main\\MainForm.cs",
+              "ToolTip": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\Main\\MainForm.cs",
+              "RelativeToolTip": "Main\\MainForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T11:07:46.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\Main\\Program.cs",
               "RelativeDocumentMoniker": "Main\\Program.cs",
               "ToolTip": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\Main\\Program.cs",
               "RelativeToolTip": "Main\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T11:33:03.96Z",
+              "WhenOpened": "2025-03-27T07:59:28.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\Main\\MainForm.cs",
+              "RelativeDocumentMoniker": "Main\\MainForm.cs",
+              "ToolTip": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\Main\\MainForm.cs [Design]",
+              "RelativeToolTip": "Main\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T07:59:33.725Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SensorData.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\Drivers\\SensorData.cs",
+              "RelativeDocumentMoniker": "Drivers\\SensorData.cs",
+              "ToolTip": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\Drivers\\SensorData.cs",
+              "RelativeToolTip": "Drivers\\SensorData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T17:53:59.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Parser.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\Drivers\\Parser.cs",
+              "RelativeDocumentMoniker": "Drivers\\Parser.cs",
+              "ToolTip": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS\\Drivers\\Parser.cs",
+              "RelativeToolTip": "Drivers\\Parser.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACoAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T16:09:00.788Z",
               "EditorCaption": ""
             }
           ]

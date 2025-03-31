@@ -11,11 +11,18 @@ namespace Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Correct and put this code to seral port selector
             
-            Serial serial = new Project.Drivers.Serial();
+        }
 
-            serial.Initialize("COM1", 9600);
+        private void btnSetConfig_Click(object sender, EventArgs e)
+        {
+            string port = txtPort.Text;
+            int.TryParse(txtBoud.Text, out int boudRate);
+
+            Serial serial = new Serial();
+            serial.Initialize(port, boudRate);
+
+            txtSetConfig.Text = serial.ToString();
         }
     }
 }

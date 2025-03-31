@@ -17,6 +17,11 @@ namespace Project.Drivers
     /// </summary>
     public class Parser : SensorData
     {
+        public override string ToString()
+        {
+            return $"ID: {Id}, Time: {Time}, Value: {Value}"; //override ToString to return the things that are relevant to me
+        }
+
         /// <summary>
         /// Parses the data from the sensor
         /// </summary>
@@ -37,10 +42,6 @@ namespace Project.Drivers
 
             return new SensorData { Id = id, Time = time, Value = value };  //returns the parsed data as a new instance of object 
         }
-
-        public override string ToString()
-        {
-            return $"ID: {Id}, Time: {Time}, Value: {Value}"; //override ToString to return the things that are relevant to me
-        }
+        
     }
 }

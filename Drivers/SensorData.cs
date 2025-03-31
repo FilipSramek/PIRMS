@@ -17,7 +17,7 @@ namespace Project.Drivers
         public DateTime Time { get; set; }
         public double Value { get; set; }
 
-
+        
         public override string ToString()
         {
             return $"ID: {Id}, Time: {Time}, Value: {Value}"; //override ToString to return the things that are relevant to me
