@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Serial2;
+using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO.Ports;
 using System.Linq;
@@ -6,12 +8,18 @@ using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace DataMaker.Drivers
 {
     class Serial : SerialPort
     {
-        string buffer = string.Empty;
+        ConcurrentQueue<double> data = new ConcurrentQueue<double>();
+        Rfc1662 rfc1662 = new Rfc1662();
 
+        /// <summary>
+        /// Writes information about serial port
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return $"Port: {this.PortName}; BouldRate: {this.BaudRate}";
@@ -26,55 +34,61 @@ namespace DataMaker.Drivers
         {
             this.PortName = port;
             this.BaudRate = bouldRate;
+
+            rfc1662.PacketReceived += Rfc1662_PacketReceived;
+        }
+
+
+        /// <summary>
+        /// Decodes message from RFC1662 standard
+        /// </summary>
+        /// <param name="buffer"></param>
+        private void Rfc1662_PacketReceived(byte[] buffer)
+        {
+            double acceleration = BitConverter.ToDouble(buffer, 0);
+            data.Enqueue(acceleration);
         }
 
         /// <summary>
         /// Read data from serial port
         /// </summary>
         /// <returns>String with data</returns>
-        public string ReadData()
+        public void DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
         {
-            try
+            while (this.BytesToRead > 0)
             {
-                if (!this.IsOpen)
-                {
-                    return "Error - Port not open";
-                }
-
-                if (this.BytesToRead == 0)
-                {
-                    return "Error - No massage found";
-                }
-
-                buffer += this.ReadExisting();
-
-                return buffer;
-
-            }
-            catch (Exception e)
-            {
-                //TO - DO: Implement error handling
-                return $"Error - Exception: {e.Message}";
+                int length = this.BytesToRead;
+                byte[] buffer = new byte[length];
+                this.Read(buffer, 0, length);
+                rfc1662.PutData(buffer, length);
             }
         }
 
-        public void WriteData(string Data)
+
+        /// <summary>
+        /// Write data to serial port
+        /// </summary>
+        /// <param name="Data"></param>
+        public void WriteData(double Data)
         {
             try
             {
                 if (!this.IsOpen)
                 {
-                    return;
+                    this.Open();
                 }
-                this.Write(Data);
+                byte[] buffer = BitConverter.GetBytes(Data);
+                byte[] encoded = rfc1662.RemoveSpecialCharacters(buffer);
+                this.Write(new byte[] { Rfc1662.STX }, 0, 1);
+                this.Write(encoded, 0, encoded.Length);
+                this.Write(new byte[] { Rfc1662.STX }, 0, 1);
+                this.Close();
             }
             catch (Exception e)
             {
                 //TO - DO: Implement error handling
             }
         }
-
-
     }
 }
 
