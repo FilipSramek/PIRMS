@@ -30,33 +30,31 @@ namespace Project.Drivers
         /// <param name="devider"></param>
         /// <returns>parsed data as a object SensorData</returns>
         public SensorData ParseData(string data, char devider)
-        {                                                                   //data format: id#time#value...
-            string[] messages = data.Split((char)0x03);
-            data = messages[messages.Length - 1];
+        {
+            // Data format: id~time~value, multiple messages separated by ETX (0x03)
             
-            for (int i = 0; i < messages.Length - 1; i++)
-            {
-                string message = messages[i].TrimStart((char)0x02);
-                string[] part = message.Split('~');
-                
-                
-                int.TryParse(part[0], out int id);
-                DateTime.TryParse(part[1], out DateTime time);
-                double.TryParse(part[2], out double value);
-                //xxx.TryParse(part[i], out xxx xxx);
+            string[] messages = data.Split((char)0x03);
+            SensorData result = null;
 
-                return new SensorData { Id = id, Time = time, Value = value };  //returns the parsed data as a new instance of object
-                //fill i acording to the position in full data
+            for (int i = 0; i < messages.Length; i++)
+            {
+                string message = messages[i].Trim();
+                if (string.IsNullOrWhiteSpace(message)) continue;
+
+                message = message.TrimStart((char)0x02); // Remove STX if present
+                string[] part = message.Split(devider);
+
+                if (part.Length >= 3)
+                {
+                    int.TryParse(part[0], out int id);
+                    DateTime.TryParse(part[1], out DateTime time);
+                    double.TryParse(part[2], out double value);
+
+                    result = new SensorData { Id = id, Time = time, Value = value };
+                }
             }
 
-
-
-            
-
-                                        
-
-             
+            return result;
         }
-        
     }
 }

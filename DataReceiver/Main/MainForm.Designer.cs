@@ -37,10 +37,12 @@
             cmbBoxPort = new ComboBox();
             cmbBoxBoud = new ComboBox();
             listView2 = new ListView();
+            txtDebug = new TextBox();
             SuspendLayout();
             // 
             // timerZeroPointOneHz
             // 
+            timerZeroPointOneHz.Enabled = true;
             timerZeroPointOneHz.Tick += timerZeroPointOneHz_Tick;
             // 
             // label1
@@ -79,6 +81,7 @@
             label3.Size = new Size(42, 15);
             label3.TabIndex = 5;
             label3.Text = "Debug";
+            label3.Click += label3_Click;
             // 
             // cmbBoxPort
             // 
@@ -107,12 +110,21 @@
             listView2.Size = new Size(346, 410);
             listView2.TabIndex = 10;
             listView2.UseCompatibleStateImageBehavior = false;
+            listView2.SelectedIndexChanged += listView2_SelectedIndexChanged;
+            // 
+            // txtDebug
+            // 
+            txtDebug.Location = new Point(364, 486);
+            txtDebug.Name = "txtDebug";
+            txtDebug.Size = new Size(736, 23);
+            txtDebug.TabIndex = 11;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1112, 521);
+            Controls.Add(txtDebug);
             Controls.Add(listView2);
             Controls.Add(cmbBoxBoud);
             Controls.Add(cmbBoxPort);
@@ -137,5 +149,6 @@
         private ComboBox cmbBoxPort;
         private ComboBox cmbBoxBoud;
         private ListView listView2;
+        private TextBox txtDebug;
     }
 }

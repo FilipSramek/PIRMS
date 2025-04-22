@@ -8,7 +8,7 @@ namespace DataMaker
         public Form1()
         {
             InitializeComponent();
-            serial.Initialize("COM10", 115200); //implemet serial port selector
+            serial.Initialize("COM1", 1000000); //implemet serial port selector
         }
 
         private void Form1_Load(object sender, EventArgs e)
