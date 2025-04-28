@@ -12,7 +12,7 @@ namespace DataReciever
     {
         public override string ToString()
         {
-            return s"FFT: GetComplex(), GetPhases(), GetMagintudes()";
+            return "FFT: GetComplex(), GetPhases(), GetMagintudes()";
         }
 
         private List<Complex32> complexResult = new List<Complex32>();
