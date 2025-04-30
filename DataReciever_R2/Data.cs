@@ -7,8 +7,12 @@ using System.Threading.Tasks;
 
 namespace DataReciever
 {
+    /// <summary>
+    /// Třída na ukládání proměnných
+    /// </summary>
     class Data
     {
+
         public DateTime TimeStamp { get; set; }
         public double Value { get; set; }
 

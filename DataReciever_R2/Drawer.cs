@@ -18,7 +18,7 @@ namespace DataReciever
         }
 
         /// <summary>
-        /// Draw chart from whole list<double> at ones
+        /// Nakreslí celý graf z jednoho list<double>
         /// </summary>
         /// <param name="windowSize"></param>
         /// <param name="Spectrum"></param>
@@ -33,7 +33,7 @@ namespace DataReciever
             }
         }
         /// <summary>
-        /// Draw the chart incrementally with each double that comes in
+        /// Postupné vykreslování grafu s postupně chodícími data
         /// </summary>
         /// <param name="windowSize"></param>
         /// <param name="signal"></param>
@@ -54,7 +54,9 @@ namespace DataReciever
                 chart.Series[0].Points.RemoveAt(0);
             }
         }
-
+        /// <summary>
+        /// Vymaže včechny body v grafu (důležité udělat před zápisem dalších čísel do grafu jinak bude nekonečný)
+        /// </summary>
         public void Clear()
         {
             chart.Series[0].Points.Clear();
