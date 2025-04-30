@@ -34,7 +34,7 @@ namespace DataMaker
 
         private void Rfc1662_PacketReceived(byte[] buffer)
         {
-           double acceleration = BitConverter.ToDouble(buffer, 0);
+           double acceleration = BitConverter.ToDouble(buffer, 0); //nebude fungovat pro strukturu
            data.Enqueue(acceleration);
         }
 
@@ -42,10 +42,10 @@ namespace DataMaker
         {
             serialPort1.PortName = portName;
             serialPort1.BaudRate = baudRate;
-            //serialPort2.PortName = portName;
-            //serialPort2.BaudRate = baudRate;
+            serialPort2.PortName = portName;
+            serialPort2.BaudRate = baudRate;
             serialPort1.Open();
-            //serialPort2.Open();
+            serialPort2.Open();
         }
 
         private void serialPort2_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
@@ -75,7 +75,7 @@ namespace DataMaker
 
         private void Send(double acc)
         {
-            byte [] buffer = BitConverter.GetBytes(acc);
+            byte [] buffer = BitConverter.GetBytes(acc); //toto nebude fungovat pro sdtrukturu
             byte[] encoded = rfc1662.RemoveSpecialCharacters(buffer);
             serialPort1.Write(new byte[] { Rfc1662.STX },0,1);
             serialPort1.Write(encoded,0,encoded.Length);

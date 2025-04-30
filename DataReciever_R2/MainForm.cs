@@ -9,14 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 using System.Windows.Forms.DataVisualization.Charting;
+using MathNet.Numerics;
+using MathNet.Numerics.IntegralTransforms;
 
 namespace DataReciever
 {
     public partial class MainForm: Form
     {
-        FFT fft = new FFT();
+        Fft fft = new Fft();
 
         List<double> signal = new List<double>();
+        List<Complex32> complex = new List<Complex32>();
         List<double> magnitudeSpectrum = new List<double>();
         List<double> phaseSpectrum = new List<double>();
         Data data = new Data();
@@ -35,7 +38,7 @@ namespace DataReciever
         {
             Drawer ChartTemporal = new Drawer { chart = chrtTimeSpace };
                 
-            ChartPhase.DrawDynamic(100, data.Value, signal.Count);
+            ChartTemporal.DrawDynamic(100, data.Value, signal.Count);
         }
 
         private void timer1000_Tick(object sender, EventArgs e)
@@ -43,11 +46,12 @@ namespace DataReciever
             Drawer ChartPhase = new Drawer { chart = chrtFreqSpacePhase };
             Drawer ChartMagnitude = new Drawer { chart = chrtFreqSpaceMag };
 
-            magnitudeSpectrum = fft.GetMagnitudes(signal); //podle toho co budeme chtít počítat -> fáze nebo magnitudy
-            phaseSpectrum = fft.GetPhases(signal);
+            complex = fft.GetComplex(signal);
+            magnitudeSpectrum = fft.GetMagnitudes(complex); //podle toho co budeme chtít počítat -> fáze nebo magnitudy
+            phaseSpectrum = fft.GetPhases(complex);
 
-            ChartPhase.DrawStatic(100, phaseSpectrum);
-            ChartMagnitude.DrawStatic(100, magnitudeSpectrum);
+            ChartPhase.DrawStatic(10000, phaseSpectrum);
+            ChartMagnitude.DrawStatic(10000, magnitudeSpectrum);
         }     
     }
 }

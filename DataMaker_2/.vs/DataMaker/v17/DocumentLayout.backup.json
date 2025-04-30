@@ -30,24 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Rfc1662.cs",
-              "DocumentMoniker": "C:\\Users\\skopa\\Documents\\VSB\\2.2\\pirms\\Nov\u00E1 slo\u017Eka\\PIRMS\\DataMaker\\Drivers\\Rfc1662.cs",
-              "RelativeDocumentMoniker": "Drivers\\Rfc1662.cs",
-              "ToolTip": "C:\\Users\\skopa\\Documents\\VSB\\2.2\\pirms\\Nov\u00E1 slo\u017Eka\\PIRMS\\DataMaker\\Drivers\\Rfc1662.cs",
-              "RelativeToolTip": "Drivers\\Rfc1662.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAMwEYAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T11:52:19.529Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -57,7 +44,7 @@
               "RelativeDocumentMoniker": "Drivers\\Serial.cs",
               "ToolTip": "C:\\Users\\skopa\\Documents\\VSB\\2.2\\pirms\\Nov\u00E1 slo\u017Eka\\PIRMS\\DataMaker\\Drivers\\Serial.cs",
               "RelativeToolTip": "Drivers\\Serial.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAIAwwCsAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwAQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-21T16:26:55.172Z",
               "EditorCaption": ""
@@ -81,11 +68,24 @@
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\skopa\\Documents\\VSB\\2.2\\pirms\\Nov\u00E1 slo\u017Eka\\PIRMS\\DataMaker\\Form\\Form1.cs",
               "RelativeDocumentMoniker": "Form\\Form1.cs",
-              "ToolTip": "C:\\Users\\skopa\\Documents\\VSB\\2.2\\pirms\\Nov\u00E1 slo\u017Eka\\PIRMS\\DataMaker\\Form\\Form1.cs*",
-              "RelativeToolTip": "Form\\Form1.cs*",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAmwHAAAAARAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\skopa\\Documents\\VSB\\2.2\\pirms\\Nov\u00E1 slo\u017Eka\\PIRMS\\DataMaker\\Form\\Form1.cs",
+              "RelativeToolTip": "Form\\Form1.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAAwCgAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-18T11:26:07.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Rfc1662.cs",
+              "DocumentMoniker": "C:\\Users\\skopa\\Documents\\VSB\\2.2\\pirms\\Nov\u00E1 slo\u017Eka\\PIRMS\\DataMaker\\Drivers\\Rfc1662.cs",
+              "RelativeDocumentMoniker": "Drivers\\Rfc1662.cs",
+              "ToolTip": "C:\\Users\\skopa\\Documents\\VSB\\2.2\\pirms\\Nov\u00E1 slo\u017Eka\\PIRMS\\DataMaker\\Drivers\\Rfc1662.cs",
+              "RelativeToolTip": "Drivers\\Rfc1662.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAMwEYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T11:52:19.529Z",
               "EditorCaption": ""
             },
             {
@@ -94,8 +94,8 @@
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\skopa\\Documents\\VSB\\2.2\\pirms\\Nov\u00E1 slo\u017Eka\\PIRMS\\DataMaker\\Form\\Form1.cs",
               "RelativeDocumentMoniker": "Form\\Form1.cs",
-              "ToolTip": "C:\\Users\\skopa\\Documents\\VSB\\2.2\\pirms\\Nov\u00E1 slo\u017Eka\\PIRMS\\DataMaker\\Form\\Form1.cs [Design]*",
-              "RelativeToolTip": "Form\\Form1.cs [Design]*",
+              "ToolTip": "C:\\Users\\skopa\\Documents\\VSB\\2.2\\pirms\\Nov\u00E1 slo\u017Eka\\PIRMS\\DataMaker\\Form\\Form1.cs [Design]",
+              "RelativeToolTip": "Form\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-18T11:25:58.404Z",
               "EditorCaption": " [Design]"

@@ -7,8 +7,11 @@ using MathNet.Numerics;
 using MathNet.Numerics.IntegralTransforms;
 
 namespace DataReciever
-{
-    class FFT
+{   
+    /// <summary>
+    /// Na to aby třída fungovala správě je první potřeba spočíat komplecní vídledek fft a až z kkomplexního výsledku vypočítat fáze a magnitudy
+    /// </summary>
+    class Fft
     {
         public override string ToString()
         {
@@ -50,9 +53,8 @@ namespace DataReciever
              return complexResult;
         }
 
-        public List<double> GetMagnitudes(List<double> inputSignal)
+        public List<double> GetMagnitudes(List<Complex32> complexResult)
         {
-            complexResult = this.Compute(inputSignal);
             List<double> magnitudes = new List<double>(complexResult.Count);
             foreach (var c in complexResult)
             {
@@ -61,9 +63,8 @@ namespace DataReciever
             return magnitudes;
         }
 
-        public List<double> GetPhases(List<double> inputSignal)
+        public List<double> GetPhases(List<Complex32> complexResult)
         {
-            complexResult = this.Compute(inputSignal);
             List<double> phases = new List<double>(complexResult.Count);
             foreach (var c in complexResult)
             {
