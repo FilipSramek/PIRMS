@@ -1,0 +1,108 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\skopa\\Documents\\VSB\\2.2\\pirms\\Nov\u00E1 slo\u017Eka\\PIRMS\\DataMaker\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F41CFAC9-C09D-4386-B540-446211F1B938}|DataMaker.csproj|c:\\users\\skopa\\documents\\vsb\\2.2\\pirms\\nov\u00E1 slo\u017Eka\\pirms\\datamaker\\form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F41CFAC9-C09D-4386-B540-446211F1B938}|DataMaker.csproj|solutionrelative:form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F41CFAC9-C09D-4386-B540-446211F1B938}|DataMaker.csproj|C:\\Users\\skopa\\Documents\\VSB\\2.2\\pirms\\Nov\u00E1 slo\u017Eka\\PIRMS\\DataMaker\\form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F41CFAC9-C09D-4386-B540-446211F1B938}|DataMaker.csproj|solutionrelative:form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F41CFAC9-C09D-4386-B540-446211F1B938}|DataMaker.csproj|c:\\users\\skopa\\documents\\vsb\\2.2\\pirms\\nov\u00E1 slo\u017Eka\\pirms\\datamaker\\drivers\\serial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F41CFAC9-C09D-4386-B540-446211F1B938}|DataMaker.csproj|solutionrelative:drivers\\serial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F41CFAC9-C09D-4386-B540-446211F1B938}|DataMaker.csproj|c:\\users\\skopa\\documents\\vsb\\2.2\\pirms\\nov\u00E1 slo\u017Eka\\pirms\\datamaker\\drivers\\rfc1662.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F41CFAC9-C09D-4386-B540-446211F1B938}|DataMaker.csproj|solutionrelative:drivers\\rfc1662.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F41CFAC9-C09D-4386-B540-446211F1B938}|DataMaker.csproj|c:\\users\\skopa\\documents\\vsb\\2.2\\pirms\\nov\u00E1 slo\u017Eka\\pirms\\datamaker\\drivers\\sensordata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F41CFAC9-C09D-4386-B540-446211F1B938}|DataMaker.csproj|solutionrelative:drivers\\sensordata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Rfc1662.cs",
+              "DocumentMoniker": "C:\\Users\\skopa\\Documents\\VSB\\2.2\\pirms\\Nov\u00E1 slo\u017Eka\\PIRMS\\DataMaker\\Drivers\\Rfc1662.cs",
+              "RelativeDocumentMoniker": "Drivers\\Rfc1662.cs",
+              "ToolTip": "C:\\Users\\skopa\\Documents\\VSB\\2.2\\pirms\\Nov\u00E1 slo\u017Eka\\PIRMS\\DataMaker\\Drivers\\Rfc1662.cs",
+              "RelativeToolTip": "Drivers\\Rfc1662.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAMwEYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T11:52:19.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Serial.cs",
+              "DocumentMoniker": "C:\\Users\\skopa\\Documents\\VSB\\2.2\\pirms\\Nov\u00E1 slo\u017Eka\\PIRMS\\DataMaker\\Drivers\\Serial.cs",
+              "RelativeDocumentMoniker": "Drivers\\Serial.cs",
+              "ToolTip": "C:\\Users\\skopa\\Documents\\VSB\\2.2\\pirms\\Nov\u00E1 slo\u017Eka\\PIRMS\\DataMaker\\Drivers\\Serial.cs",
+              "RelativeToolTip": "Drivers\\Serial.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAIAwwCsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T16:26:55.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SensorData.cs",
+              "DocumentMoniker": "C:\\Users\\skopa\\Documents\\VSB\\2.2\\pirms\\Nov\u00E1 slo\u017Eka\\PIRMS\\DataMaker\\Drivers\\SensorData.cs",
+              "RelativeDocumentMoniker": "Drivers\\SensorData.cs",
+              "ToolTip": "C:\\Users\\skopa\\Documents\\VSB\\2.2\\pirms\\Nov\u00E1 slo\u017Eka\\PIRMS\\DataMaker\\Drivers\\SensorData.cs",
+              "RelativeToolTip": "Drivers\\SensorData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T11:29:06.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\skopa\\Documents\\VSB\\2.2\\pirms\\Nov\u00E1 slo\u017Eka\\PIRMS\\DataMaker\\Form\\Form1.cs",
+              "RelativeDocumentMoniker": "Form\\Form1.cs",
+              "ToolTip": "C:\\Users\\skopa\\Documents\\VSB\\2.2\\pirms\\Nov\u00E1 slo\u017Eka\\PIRMS\\DataMaker\\Form\\Form1.cs*",
+              "RelativeToolTip": "Form\\Form1.cs*",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAmwHAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T11:26:07.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\skopa\\Documents\\VSB\\2.2\\pirms\\Nov\u00E1 slo\u017Eka\\PIRMS\\DataMaker\\Form\\Form1.cs",
+              "RelativeDocumentMoniker": "Form\\Form1.cs",
+              "ToolTip": "C:\\Users\\skopa\\Documents\\VSB\\2.2\\pirms\\Nov\u00E1 slo\u017Eka\\PIRMS\\DataMaker\\Form\\Form1.cs [Design]*",
+              "RelativeToolTip": "Form\\Form1.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T11:25:58.404Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
