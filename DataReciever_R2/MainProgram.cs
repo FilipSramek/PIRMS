@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace DataReciever
 {
-    static class Main
+    static class MainProgram
     {
         /// <summary>
         /// The main entry point for the application.
