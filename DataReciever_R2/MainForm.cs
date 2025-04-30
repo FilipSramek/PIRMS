@@ -12,75 +12,42 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace DataReciever
 {
-    public partial class Form1: Form
+    public partial class MainForm: Form
     {
-        List<double> signal = new List<double>();
         FFT fft = new FFT();
+
+        List<double> signal = new List<double>();
         List<double> magnitudeSpectrum = new List<double>();
         List<double> phaseSpectrum = new List<double>();
+        Data data = new Data();
 
-        public Form1()
+
+        public MainForm()
         {
             InitializeComponent();
+        }
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            DrawChartTimeSpace(100);
+            Drawer ChartTemporal = new Drawer { chart = chrtTimeSpace };
+                
+            ChartPhase.DrawDynamic(100, data.Value, signal.Count);
         }
 
         private void timer1000_Tick(object sender, EventArgs e)
         {
+            Drawer ChartPhase = new Drawer { chart = chrtFreqSpacePhase };
+            Drawer ChartMagnitude = new Drawer { chart = chrtFreqSpaceMag };
+
             magnitudeSpectrum = fft.GetMagnitudes(signal); //podle toho co budeme chtít počítat -> fáze nebo magnitudy
             phaseSpectrum = fft.GetPhases(signal);
 
-            DrawChartMagnitudeSpertum(100);
-            DrawChartPhaseSpectrum(100);
-
-        }
-
-        private void DrawChartMagnitudeSpertum(int windowSize)
-        {
-            chrtFreqSpaceMag.ChartAreas[0].AxisX.Minimum = windowSize;
-            chrtFreqSpaceMag.ChartAreas[0].AxisX.Maximum = 0;
-
-            for (int i = 0; i < magnitudeSpectrum.Count; i++)
-            {
-                chrtFreqSpaceMag.Series[0].Points.AddXY(i, magnitudeSpectrum[i]);
-            }
-        }
-
-        private void DrawChartPhaseSpectrum(int windowSize)
-        {          
-            chrtFreqSpacePhase.ChartAreas[0].AxisX.Minimum = windowSize;
-            chrtFreqSpacePhase.ChartAreas[0].AxisX.Maximum = 0;
-
-            for (int i = 0; i < phaseSpectrum.Count; i++)
-            {
-                chrtFreqSpacePhase.Series[0].Points.AddXY(i, phaseSpectrum[i]);
-            }
-        }
-
-        private void DrawChartTimeSpace(int windowSize)
-        {
-            double x = 0;
-
-            if (x > windowSize)
-            {
-                chrtTimeSpace.ChartAreas[0].AxisX.Minimum = x - windowSize;
-                chrtTimeSpace.ChartAreas[0].AxisX.Maximum = x;
-            }
-
-            foreach (var y in signal)
-            {
-                chrtTimeSpace.Series[0].Points.AddXY(x, y);
-            }
-
-            while (chrtTimeSpace.Series[0].Points[0].XValue < x - windowSize)
-            {
-                chrtTimeSpace.Series[0].Points.RemoveAt(0);
-            }
-            x++;
-        }
+            ChartPhase.DrawStatic(100, phaseSpectrum);
+            ChartMagnitude.DrawStatic(100, magnitudeSpectrum);
+        }     
     }
 }

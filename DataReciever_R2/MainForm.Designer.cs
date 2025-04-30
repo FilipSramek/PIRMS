@@ -1,6 +1,6 @@
 ﻿namespace DataReciever
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -41,6 +38,9 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.timer100 = new System.Windows.Forms.Timer(this.components);
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -120,20 +120,20 @@
             // chrtFreqSpacePhase
             // 
             this.chrtFreqSpacePhase.CausesValidation = false;
-            chartArea4.Name = "ChartArea1";
-            this.chrtFreqSpacePhase.ChartAreas.Add(chartArea4);
-            legend4.Enabled = false;
-            legend4.Name = "Legend1";
-            this.chrtFreqSpacePhase.Legends.Add(legend4);
+            chartArea5.Name = "ChartArea1";
+            this.chrtFreqSpacePhase.ChartAreas.Add(chartArea5);
+            legend5.Enabled = false;
+            legend5.Name = "Legend1";
+            this.chrtFreqSpacePhase.Legends.Add(legend5);
             this.chrtFreqSpacePhase.Location = new System.Drawing.Point(12, 744);
             this.chrtFreqSpacePhase.Name = "chrtFreqSpacePhase";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.IsVisibleInLegend = false;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            series4.YValuesPerPoint = 4;
-            this.chrtFreqSpacePhase.Series.Add(series4);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.IsVisibleInLegend = false;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            series5.YValuesPerPoint = 4;
+            this.chrtFreqSpacePhase.Series.Add(series5);
             this.chrtFreqSpacePhase.Size = new System.Drawing.Size(1500, 145);
             this.chrtFreqSpacePhase.TabIndex = 7;
             this.chrtFreqSpacePhase.Text = "chart2";
@@ -156,20 +156,20 @@
             // chrtFreqSpaceMag
             // 
             this.chrtFreqSpaceMag.CausesValidation = false;
-            chartArea5.Name = "ChartArea1";
-            this.chrtFreqSpaceMag.ChartAreas.Add(chartArea5);
-            legend5.Enabled = false;
-            legend5.Name = "Legend1";
-            this.chrtFreqSpaceMag.Legends.Add(legend5);
+            chartArea6.Name = "ChartArea1";
+            this.chrtFreqSpaceMag.ChartAreas.Add(chartArea6);
+            legend6.Enabled = false;
+            legend6.Name = "Legend1";
+            this.chrtFreqSpaceMag.Legends.Add(legend6);
             this.chrtFreqSpaceMag.Location = new System.Drawing.Point(12, 593);
             this.chrtFreqSpaceMag.Name = "chrtFreqSpaceMag";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series5.IsVisibleInLegend = false;
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            series5.YValuesPerPoint = 4;
-            this.chrtFreqSpaceMag.Series.Add(series5);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.IsVisibleInLegend = false;
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            series6.YValuesPerPoint = 4;
+            this.chrtFreqSpaceMag.Series.Add(series6);
             this.chrtFreqSpaceMag.Size = new System.Drawing.Size(1500, 145);
             this.chrtFreqSpaceMag.TabIndex = 9;
             this.chrtFreqSpaceMag.Text = "chart2";
@@ -177,20 +177,20 @@
             // chrtTimeSpace
             // 
             this.chrtTimeSpace.CausesValidation = false;
-            chartArea6.Name = "ChartArea1";
-            this.chrtTimeSpace.ChartAreas.Add(chartArea6);
-            legend6.Enabled = false;
-            legend6.Name = "Legend1";
-            this.chrtTimeSpace.Legends.Add(legend6);
+            chartArea7.Name = "ChartArea1";
+            this.chrtTimeSpace.ChartAreas.Add(chartArea7);
+            legend7.Enabled = false;
+            legend7.Name = "Legend1";
+            this.chrtTimeSpace.Legends.Add(legend7);
             this.chrtTimeSpace.Location = new System.Drawing.Point(915, 37);
             this.chrtTimeSpace.Name = "chrtTimeSpace";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series6.IsVisibleInLegend = false;
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            series6.YValuesPerPoint = 4;
-            this.chrtTimeSpace.Series.Add(series6);
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series7.IsVisibleInLegend = false;
+            series7.Legend = "Legend1";
+            series7.Name = "Series1";
+            series7.YValuesPerPoint = 4;
+            this.chrtTimeSpace.Series.Add(series7);
             this.chrtTimeSpace.Size = new System.Drawing.Size(597, 248);
             this.chrtTimeSpace.TabIndex = 10;
             this.chrtTimeSpace.Text = "chart2";
@@ -228,25 +228,25 @@
             // chart1
             // 
             this.chart1.CausesValidation = false;
-            chartArea7.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea7);
-            legend7.Enabled = false;
-            legend7.Name = "Legend1";
-            this.chart1.Legends.Add(legend7);
+            chartArea8.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea8);
+            legend8.Enabled = false;
+            legend8.Name = "Legend1";
+            this.chart1.Legends.Add(legend8);
             this.chart1.Location = new System.Drawing.Point(12, 390);
             this.chart1.Name = "chart1";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series7.IsVisibleInLegend = false;
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            series7.YValuesPerPoint = 4;
-            this.chart1.Series.Add(series7);
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series8.IsVisibleInLegend = false;
+            series8.Legend = "Legend1";
+            series8.Name = "Series1";
+            series8.YValuesPerPoint = 4;
+            this.chart1.Series.Add(series8);
             this.chart1.Size = new System.Drawing.Size(1500, 145);
             this.chart1.TabIndex = 15;
             this.chart1.Text = "chart2";
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -266,8 +266,9 @@
             this.Controls.Add(this.txtBould);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chrtFreqSpacePhase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chrtFreqSpaceMag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chrtTimeSpace)).EndInit();
