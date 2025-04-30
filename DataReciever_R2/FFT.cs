@@ -14,8 +14,13 @@ namespace DataReciever
         {
             return "FFT: GetComplex(), GetPhases(), GetMagintudes()";
         }
-
+        //TO-DO:
+        /* přidat settings do compute pro různé možnosti exportů a ušetření paměti
+         * 
+         */
         private List<Complex32> complexResult = new List<Complex32>();
+        private List<double> magnitudesResult = new List<double>();
+        private List<double> phasesResult = new List<double>();
 
         private List<Complex32> Compute(List<double> inputSignal)
         {

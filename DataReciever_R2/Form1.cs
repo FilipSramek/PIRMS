@@ -51,9 +51,7 @@ namespace DataReciever
         }
 
         private void DrawChartPhaseSpectrum(int windowSize)
-        {
-            int x = 0;
-            
+        {          
             chrtFreqSpacePhase.ChartAreas[0].AxisX.Minimum = windowSize;
             chrtFreqSpacePhase.ChartAreas[0].AxisX.Maximum = 0;
 
