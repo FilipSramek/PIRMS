@@ -27,7 +27,7 @@ namespace DataReciever
         /// </summary>
         /// <returns><T></returns>
         /// <exception cref="InvalidOperationException"></exception>
-        public T Dequeue()                              
+        public T Dequeue()
         {
             if (queue.Count == 0)
             {
@@ -35,15 +35,12 @@ namespace DataReciever
             }
             return queue.Dequeue();
         }
-        /// <summary>
-        /// Vrací celou frontu jako list
-        /// </summary>
-        /// <returns>List<T></returns>
-        public List<T> ToList()
-        {
-            return queue.ToList();
-        }
 
+        //už chápu co jsou to lambda výrazy -> udělám medodu uvnitř svoji třídy, ale mohu ji poslat dělat něco jiného co je definované v jiné metodě
 
+        public T[] ToArray() => queue.ToArray();        //Vrátí frontu jako pole
+        public List<T> ToList() => queue.ToList();      //Vrátí frontu jako list
+        public int Count => queue.Count;                //Vrátí velikost fronty
+        public void Clear() => queue.Clear();           //Smaže celou frontu
     }
 }
