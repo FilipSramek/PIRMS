@@ -57,7 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Csv.cs" />
+    <Compile Include="CsvDriver.cs" />
     <Compile Include="Drawer.cs" />
     <Compile Include="Data.cs" />
     <Compile Include="Fft.cs" />
