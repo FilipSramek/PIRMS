@@ -4,7 +4,7 @@
     <Compile Update="Drivers\Serial.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Update="Form\Form1.cs">
+    <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

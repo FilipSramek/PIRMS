@@ -38,7 +38,7 @@ namespace DataReciever
         private void MainForm_Load(object sender, EventArgs e)
         {
             signal = csv.CsvToListDouble("C:\\Users\\filip\\SynologyDrive\\VŠB-TUO\\Předměty\\PIRMS - Prostředky implementace řídících a monitorovacích systémů\\Project\\PIRMS\\DataMaker\\data.csv");
-            foreach (var value in signal)
+            foreach (var value in signal) //Umělé generování dat tak, aby byla vždy přiřazena jedna časová značka
             {
                 dataList.Add(new Data { TimeStamp = DateTime.Now, Value = value });
             }
@@ -46,12 +46,12 @@ namespace DataReciever
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            foreach (var data in dataList)
+            foreach (var data in dataList) // Takhle to být nemůže v tomto programu protože by to úplně zastavilo zbytek programu (v tom druhém to, ale takto být může)
             {
-                this.sender.Send(data);
+                this.sender.Send(data);         //TOTO MUSÍME OPRAVIT PROTOŽE PROGRAM DELÁ TOTO A NIC JINÉHO BĚHEM TOHO
             }           
             Drawer ChartTemporal = new Drawer { chart = chrtTimeSpace };               
-            ChartTemporal.DrawDynamic(100, data.Value, signal.Count);
+            ChartTemporal.DrawDynamic(100, data.Value, data.TimeStamp.TimeOfDay.Ticks);  //data.Value jsou vibrace; ta druhá monstrozita je uločená časová značka přebedená na long
         }
 
         private void timer1000_Tick(object sender, EventArgs e)
@@ -63,7 +63,8 @@ namespace DataReciever
 
             while (this.sender.ReceivedDataQueue.TryDequeue(out Data receivedData))
             {
-                circularQueue.Enqueue(receivedData);
+                circularQueue.Enqueue(receivedData);                            //nahraj poslední příchozí data do cirkulární fronty pro fft
+                data = receivedData;                                            // aktualizuj podleslení příchozí data v globální prměnné
             }
 
 

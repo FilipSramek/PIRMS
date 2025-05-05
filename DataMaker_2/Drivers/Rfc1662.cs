@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Serial2
+namespace DataMaker
 {
     public class Rfc1662
     {

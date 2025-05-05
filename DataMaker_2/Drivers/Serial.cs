@@ -1,11 +1,10 @@
-﻿using Serial2;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO.Ports;
 using System.Text;
 using System.Windows.Forms;
 
-namespace DataMaker.Drivers
+namespace DataMaker
 {
     public class Serial : SerialPort
     {
