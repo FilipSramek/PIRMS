@@ -26,13 +26,14 @@ namespace DataReciever
         Data data = new Data();
         CsvDriver csv = new CsvDriver();
         // Move the initialization of the Sender instance to the constructor
-        Sender senderSerial;
+        Sender sender;
+
 
 
         public MainForm()
         {
             InitializeComponent();
-            senderSerial = new Sender(serialPort2);
+            sender = new Sender(serialPort2);
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -47,7 +48,7 @@ namespace DataReciever
         {
             foreach (var data in dataList)
             {
-                senderSerial.Send(data);
+                this.sender.Send(data);
             }           
             Drawer ChartTemporal = new Drawer { chart = chrtTimeSpace };               
             ChartTemporal.DrawDynamic(100, data.Value, signal.Count);
@@ -57,6 +58,14 @@ namespace DataReciever
         {            
             Drawer ChartPhase = new Drawer { chart = chrtFreqSpacePhase };
             Drawer ChartMagnitude = new Drawer { chart = chrtFreqSpaceMag };
+
+            CircularQueue<Data> circularQueue = new CircularQueue<Data> { Size = 1000 };
+
+            while (this.sender.ReceivedDataQueue.TryDequeue(out Data receivedData))
+            {
+                circularQueue.Enqueue(receivedData);
+            }
+
 
             complex = fft.GetComplex(signal);
             magnitudeSpectrum = fft.GetMagnitudes(complex); //podle toho co budeme chtít počítat -> fáze nebo magnitudy
@@ -92,8 +101,10 @@ namespace DataReciever
                 serialPort2.BaudRate = baudRate;
                 serialPort2.Open();
 
-                txtDebug.Text = $"Connected to {portName} at {baudRate} baud.\n";
+                this.sender.AttachReceiver();
 
+                txtDebug.Text = $"Connected to {portName} at {baudRate} baud.\n";
+                                
                 timer100.Enabled = true;
                 timer1000.Enabled = true;
             }

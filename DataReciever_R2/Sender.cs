@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Concurrent;
 using System.IO.Ports; // kvůli SerialPort
+using System.Windows.Forms;
+using DataReciever;
 
 namespace DataReciever
 {
@@ -9,8 +13,7 @@ namespace DataReciever
         private readonly Rfc1662 rfc;
         private readonly Serializer serializer;
 
-        // Událost vyvolaná při přijetí kompletního objektu Data
-        public event Action<Data> DataReceived;
+        public ConcurrentQueue<Data> ReceivedDataQueue = new ConcurrentQueue<Data>();
 
         public Sender(SerialPort serialPort)
         {
@@ -37,28 +40,24 @@ namespace DataReciever
             port.DataReceived += Port_DataReceived;
         }
 
-         // Čte přijatá data a předává je do dekodéru RFC1662
+        // Čte přijatá data a předává je do dekodéru RFC1662
         private void Port_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            int length = port.BytesToRead;
-            byte[] buffer = new byte[length];
-            port.Read(buffer, 0, length);
-            rfc.PutData(buffer, length);
+            while (port.BytesToRead > 0)
+            {
+                int length = port.BytesToRead;
+                byte[] buffer = new byte[length];
+                port.Read(buffer, 0, length);
+                rfc.PutData(buffer, length);
+            } // čeká na data
         }
 
         // Zpracuje kompletní dekódovaný paket a převádí ho zpět na objekt Data
         private void Rfc_PacketReceived(byte[] buffer)
         {
-            try
-            {
-                var data = serializer.ByteToData(buffer);
-                DataReceived?.Invoke(data);
-            }
-            catch (Exception ex)
-            {
-                // Případná chyba deserializace – můžeš logovat
-                Console.WriteLine($"Chyba při deserializaci: {ex.Message}");
-            }
+            Data data = new Data();
+            data = serializer.ByteToData(buffer);
+            ReceivedDataQueue.Enqueue(data); // Používáme nový název fronty
         }
     }
 }

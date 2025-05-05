@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CircularQueue.cs" />
     <Compile Include="CsvDriver.cs" />
     <Compile Include="Drawer.cs" />
     <Compile Include="Data.cs" />
