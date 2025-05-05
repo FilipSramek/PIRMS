@@ -10,11 +10,23 @@ namespace DataReciever
     /// <summary>
     /// Třída na ukládání proměnných
     /// </summary>
-    class Data
+    public class Data
     {
 
         public DateTime TimeStamp { get; set; }
         public double Value { get; set; }
+
+        public Data AddTimeStemp(List<double> signal)
+        {
+            foreach (var value in signal)
+            {
+                this.Value = value;
+                this.TimeStamp = DateTime.Now;
+            }
+            
+            TimeStamp = DateTime.Now;
+            return this;
+        }
 
         public override string ToString()
         {

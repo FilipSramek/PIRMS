@@ -1,8 +1,7 @@
-﻿using Serial2.Drivers; // kvůli Rfc1662
-using System;
+﻿using System;
 using System.IO.Ports; // kvůli SerialPort
 
-namespace DataMaker.Drivers
+namespace DataReciever
 {
     public class Sender
     {
@@ -10,7 +9,7 @@ namespace DataMaker.Drivers
         private readonly Rfc1662 rfc;
         private readonly Serializer serializer;
 
-        /// Událost vyvolaná při přijetí kompletního objektu Data
+        // Událost vyvolaná při přijetí kompletního objektu Data
         public event Action<Data> DataReceived;
 
         public Sender(SerialPort serialPort)
@@ -22,7 +21,7 @@ namespace DataMaker.Drivers
             rfc.PacketReceived += Rfc_PacketReceived;
         }
 
-        /// Odešle objekt Data přes sériový port s RFC1662 rámcem
+        // Odešle objekt Data přes sériový port s RFC1662 rámcem
         public void Send(Data data)
         {
             byte[] raw = serializer.DataToByte(data);
@@ -32,13 +31,13 @@ namespace DataMaker.Drivers
             port.Write(new byte[] { Rfc1662.STX }, 0, 1); // konec paketu
         }
 
-        /// Aktivuje příjem dat ze sériového portu a dekódování pomocí RFC1662
+        // Aktivuje příjem dat ze sériového portu a dekódování pomocí RFC1662
         public void AttachReceiver()
         {
             port.DataReceived += Port_DataReceived;
         }
 
-         /// Čte přijatá data a předává je do dekodéru RFC1662
+         // Čte přijatá data a předává je do dekodéru RFC1662
         private void Port_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             int length = port.BytesToRead;
@@ -47,8 +46,8 @@ namespace DataMaker.Drivers
             rfc.PutData(buffer, length);
         }
 
-        /// Zpracuje kompletní dekódovaný paket a převádí ho zpět na objekt Data
-         private void Rfc_PacketReceived(byte[] buffer)
+        // Zpracuje kompletní dekódovaný paket a převádí ho zpět na objekt Data
+        private void Rfc_PacketReceived(byte[] buffer)
         {
             try
             {

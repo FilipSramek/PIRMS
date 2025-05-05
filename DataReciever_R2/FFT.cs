@@ -28,9 +28,11 @@ namespace DataReciever
         private List<Complex32> Compute(List<double> inputSignal)
         {
             if (inputSignal == null || inputSignal.Count == 0)
+                return null;
                 throw new ArgumentException("Input signal cannot be null or empty.");
 
             if (inputSignal.Count != 100)
+                return null;
                 throw new ArgumentException("Input signal must contain exactly 100 samples.");
 
             // Convert input to Complex32[]
@@ -55,6 +57,11 @@ namespace DataReciever
 
         public List<double> GetMagnitudes(List<Complex32> complexResult)
         {
+            if (complexResult == null)
+            {
+                return null;
+            }
+            
             List<double> magnitudes = new List<double>(complexResult.Count);
             foreach (var c in complexResult)
             {
@@ -65,6 +72,10 @@ namespace DataReciever
 
         public List<double> GetPhases(List<Complex32> complexResult)
         {
+            if (complexResult == null)
+            {
+                return null;
+            }
             List<double> phases = new List<double>(complexResult.Count);
             foreach (var c in complexResult)
             {
