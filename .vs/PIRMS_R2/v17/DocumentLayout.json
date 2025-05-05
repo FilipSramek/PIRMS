@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS_R2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS_R2\\DataReciever_R2\\Sender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DataReciever_R2\\Sender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Sender.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS_R2\\DataReciever_R2\\Sender.cs",
+              "RelativeDocumentMoniker": "DataReciever_R2\\Sender.cs",
+              "ToolTip": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS_R2\\DataReciever_R2\\Sender.cs",
+              "RelativeToolTip": "DataReciever_R2\\Sender.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T10:37:29.893Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
