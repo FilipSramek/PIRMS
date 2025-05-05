@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS_R2\\DataReciever_R2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6B616522-E8C8-406C-969C-6D6040585EF7}|DataReciever.csproj|c:\\users\\filip\\synologydrive\\v\u0161b-tuo\\p\u0159edm\u011Bty\\pirms - prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\project\\pirms_r2\\datareciever_r2\\fft.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B616522-E8C8-406C-969C-6D6040585EF7}|DataReciever.csproj|solutionrelative:fft.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B616522-E8C8-406C-969C-6D6040585EF7}|DataReciever.csproj|C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS_R2\\DataReciever_R2\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6B616522-E8C8-406C-969C-6D6040585EF7}|DataReciever.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{6B616522-E8C8-406C-969C-6D6040585EF7}|DataReciever.csproj|c:\\users\\filip\\synologydrive\\v\u0161b-tuo\\p\u0159edm\u011Bty\\pirms - prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\project\\pirms_r2\\datareciever_r2\\drawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B616522-E8C8-406C-969C-6D6040585EF7}|DataReciever.csproj|solutionrelative:drawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6B616522-E8C8-406C-969C-6D6040585EF7}|DataReciever.csproj|C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS_R2\\DataReciever_R2\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6B616522-E8C8-406C-969C-6D6040585EF7}|DataReciever.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B616522-E8C8-406C-969C-6D6040585EF7}|DataReciever.csproj|C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS_R2\\DataReciever_R2\\sender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B616522-E8C8-406C-969C-6D6040585EF7}|DataReciever.csproj|solutionrelative:sender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B616522-E8C8-406C-969C-6D6040585EF7}|DataReciever.csproj|C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS_R2\\DataReciever_R2\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B616522-E8C8-406C-969C-6D6040585EF7}|DataReciever.csproj|solutionrelative:mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B616522-E8C8-406C-969C-6D6040585EF7}|DataReciever.csproj|C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS_R2\\DataReciever_R2\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6B616522-E8C8-406C-969C-6D6040585EF7}|DataReciever.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,67 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Sender.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS_R2\\DataReciever_R2\\Sender.cs",
-              "RelativeDocumentMoniker": "Sender.cs",
-              "ToolTip": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS_R2\\DataReciever_R2\\Sender.cs",
-              "RelativeToolTip": "Sender.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T17:13:43.235Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Fft.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS_R2\\DataReciever_R2\\FFT.cs",
-              "RelativeDocumentMoniker": "FFT.cs",
-              "ToolTip": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS_R2\\DataReciever_R2\\FFT.cs",
-              "RelativeToolTip": "FFT.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAowBcAAAA6AAAAAAAAAA==",
+              "Title": "Drawer.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS_R2\\DataReciever_R2\\Drawer.cs",
+              "RelativeDocumentMoniker": "Drawer.cs",
+              "ToolTip": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS_R2\\DataReciever_R2\\Drawer.cs*",
+              "RelativeToolTip": "Drawer.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T17:04:16.914Z",
+              "WhenOpened": "2025-05-05T20:50:10.675Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS_R2\\DataReciever_R2\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
               "ToolTip": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS_R2\\DataReciever_R2\\MainForm.cs",
               "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAcwIQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAHEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T16:59:23.616Z"
+              "WhenOpened": "2025-05-05T16:59:23.616Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS_R2\\DataReciever_R2\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
               "ToolTip": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS_R2\\DataReciever_R2\\MainForm.cs [Design]",
               "RelativeToolTip": "MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T16:59:18.65Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS_R2\\DataReciever_R2\\MainForm.Designer.cs",
-              "RelativeDocumentMoniker": "MainForm.Designer.cs",
-              "ToolTip": "C:\\Users\\filip\\SynologyDrive\\V\u0160B-TUO\\P\u0159edm\u011Bty\\PIRMS - Prost\u0159edky implementace \u0159\u00EDd\u00EDc\u00EDch a monitorovac\u00EDch syst\u00E9m\u016F\\Project\\PIRMS_R2\\DataReciever_R2\\MainForm.Designer.cs",
-              "RelativeToolTip": "MainForm.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkBAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T16:52:14.796Z"
+              "WhenOpened": "2025-05-05T16:59:18.65Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

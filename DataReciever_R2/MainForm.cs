@@ -37,43 +37,55 @@ namespace DataReciever
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
-            signal = csv.CsvToListDouble("C:\\Users\\filip\\SynologyDrive\\VŠB-TUO\\Předměty\\PIRMS - Prostředky implementace řídících a monitorovacích systémů\\Project\\PIRMS\\DataMaker\\data.csv");
-            foreach (var value in signal) //Umělé generování dat tak, aby byla vždy přiřazena jedna časová značka
-            {
-                dataList.Add(new Data { TimeStamp = DateTime.Now, Value = value });
-            }
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            foreach (var data in dataList) // Takhle to být nemůže v tomto programu protože by to úplně zastavilo zbytek programu (v tom druhém to, ale takto být může)
-            {
-                this.sender.Send(data);         //TOTO MUSÍME OPRAVIT PROTOŽE PROGRAM DELÁ TOTO A NIC JINÉHO BĚHEM TOHO
-            }           
-            Drawer ChartTemporal = new Drawer { chart = chrtTimeSpace };               
+            Drawer ChartTemporal = new Drawer() { chart = chrtTimeSpace };
             ChartTemporal.DrawDynamic(100, data.Value, data.TimeStamp.TimeOfDay.Ticks);  //data.Value jsou vibrace; ta druhá monstrozita je uločená časová značka přebedená na long
         }
 
         private void timer1000_Tick(object sender, EventArgs e)
-        {            
-            Drawer ChartPhase = new Drawer { chart = chrtFreqSpacePhase };
-            Drawer ChartMagnitude = new Drawer { chart = chrtFreqSpaceMag };
-
-            CircularQueue<Data> circularQueue = new CircularQueue<Data> { Size = 1000 };
-
-            while (this.sender.ReceivedDataQueue.TryDequeue(out Data receivedData))
+        {
+            try
             {
-                circularQueue.Enqueue(receivedData);                            //nahraj poslední příchozí data do cirkulární fronty pro fft
-                data = receivedData;                                            // aktualizuj podleslení příchozí data v globální prměnné
+                Drawer ChartPhase = new Drawer { chart = chrtFreqSpacePhase };
+                Drawer ChartMagnitude = new Drawer { chart = chrtFreqSpaceMag };
+
+                CircularQueue<Data> circularQueue = new CircularQueue<Data>() { Size = 10000 };
+
+                while (this.sender.ReceivedDataQueue.TryDequeue(out Data receivedData))
+                {
+                    circularQueue.Enqueue(receivedData);                            //nahraj poslední příchozí data do cirkulární fronty pro fft
+                    data = receivedData;                                            // aktualizuj podleslení příchozí data v globální prměnné
+                    txtDebug.Text = $"Received: {data.Value}\n";                    // zobraz poslední příchozí data
+                }
+                // Load the current circularQueue into signal
+                signal = circularQueue.ToList().Select(data => data.Value).ToList();
+                //nahrání aktuálního circularqueue do signal
+                
+
+                complex = fft.GetComplex(signal);
+                magnitudeSpectrum = fft.GetMagnitudes(complex); //podle toho co budeme chtít počítat -> fáze nebo magnitudy
+                phaseSpectrum = fft.GetPhases(complex);
+                ChartPhase.Clear();
+                ChartMagnitude.Clear();
+                if (phaseSpectrum != null)
+                    ChartPhase.DrawStatic(10000, phaseSpectrum);
+                if (magnitudeSpectrum != null)
+                    ChartMagnitude.DrawStatic(10000, magnitudeSpectrum);
+                else 
+                {
+                    txtDebug.Text = "Magnitude spectrum is null.";
+                }
             }
 
-
-            complex = fft.GetComplex(signal);
-            magnitudeSpectrum = fft.GetMagnitudes(complex); //podle toho co budeme chtít počítat -> fáze nebo magnitudy
-            phaseSpectrum = fft.GetPhases(complex);
-
-            ChartPhase.DrawStatic(10000, phaseSpectrum);
-            ChartMagnitude.DrawStatic(10000, magnitudeSpectrum);
+            catch(Exception ex)
+            {
+                txtDebug.Text = $"Error drawing chart: {ex.Message}";
+            }
+      
         }
 
         private void btnConnect_Click(object sender, EventArgs e)
@@ -82,29 +94,25 @@ namespace DataReciever
             {
                 string portName = txtPort.Text;
 
-                if (!int.TryParse(txtBould.Text, out int baudRate))
+                /*if (!int.TryParse(txtBould.Text, out int baudRate)) //je důležité odkomentovat na to aby fungovalu uživatelské rozhraní
                 {
                     txtDebug.Text = "Invalid baud rate.";
                     return;
-                }
+                }*/
 
                 if (serialPort1.IsOpen)
                 {
                     txtDebug.Text = "Serial port is already open.";
                     return;
                 }
-
-                serialPort1.PortName = portName;
-                serialPort1.BaudRate = baudRate;
-                serialPort1.Open();
-
-                serialPort2.PortName = portName;
-                serialPort2.BaudRate = baudRate;
+                
+                serialPort2.PortName = "COM10";   //nahraď portName a boudRate z textBoxu, jen jsem si ulehčil debugobání
+                serialPort2.BaudRate = 921600;
                 serialPort2.Open();
 
                 this.sender.AttachReceiver();
 
-                txtDebug.Text = $"Connected to {portName} at {baudRate} baud.\n";
+                txtDebug.Text = $"Connected to {portName} at {921600} baud.\n";
                                 
                 timer100.Enabled = true;
                 timer1000.Enabled = true;

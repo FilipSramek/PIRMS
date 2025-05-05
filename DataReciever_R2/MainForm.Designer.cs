@@ -150,7 +150,7 @@
             // 
             // timer1000
             // 
-            this.timer1000.Interval = 1000;
+            this.timer1000.Interval = 10000;
             this.timer1000.Tick += new System.EventHandler(this.timer1000_Tick);
             // 
             // chrtFreqSpaceMag

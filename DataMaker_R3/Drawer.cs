@@ -1,16 +1,15 @@
-﻿using MathNet.Numerics;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms.DataVisualization.Charting;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
+using DataMaker_R3;
 
-namespace DataReciever
+namespace DataMaker_R3      
 {
-    class Drawer
+    public class Drawer
     {
         public Chart chart { get; set; }
 
@@ -24,23 +23,15 @@ namespace DataReciever
         /// </summary>
         /// <param name="windowSize"></param>
         /// <param name="Spectrum"></param>
-        public void DrawStatic(int windowSize, List<double> spectrum)
+        public void DrawStatic(int windowSize, List<double> Spectrum)
         {
-            try
+            chart.ChartAreas[0].AxisX.Minimum = windowSize;
+            chart.ChartAreas[0].AxisX.Maximum = 0;
+
+            for (int i = 0; i < Spectrum.Count; i++)
             {
-                chart.ChartAreas[0].AxisX.Minimum = 0;
-                chart.ChartAreas[0].AxisX.Maximum = windowSize;
-                chart.ChartAreas[0].AxisY.ScaleView.Zoom(1, 10000000);
-                for (int i = 0; i < spectrum.Count; i++)
-                {
-                    chart.Series[0].Points.AddXY(i, spectrum[i]);
-                }
+                chart.Series[0].Points.AddXY(i, Spectrum[i]);
             }
-            catch (Exception ex)
-            {
-                //implementuj exeption handeling
-            }
-            
         }
         /// <summary>
         /// Postupné vykreslování grafu s postupně chodícími data

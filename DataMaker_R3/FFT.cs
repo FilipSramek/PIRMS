@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MathNet.Numerics;              
+using MathNet.Numerics;
 using MathNet.Numerics.IntegralTransforms;
+using DataMaker_R3;
+using System.Numerics;
 
-namespace DataReciever
+namespace DataMaker_R3
 {   
     /// <summary>
     /// Na to aby třída fungovala správě je první potřeba spočíat komplecní vídledek fft a až z kkomplexního výsledku vypočítat fáze a magnitudy
     /// </summary>
-    class Fft
+    public class Fft
     {
         public override string ToString()
         {
@@ -28,15 +30,13 @@ namespace DataReciever
         private List<Complex32> Compute(List<double> inputSignal)
         {
             if (inputSignal == null || inputSignal.Count == 0)
-            {
                 return null;
                 throw new ArgumentException("Input signal cannot be null or empty.");
-            }
-            /*if (inputSignal.Count != 100)
-            {
+
+            if (inputSignal.Count != 100)
                 return null;
                 throw new ArgumentException("Input signal must contain exactly 100 samples.");
-            }*/
+
             // Convert input to Complex32[]
             Complex32[] complexSignal = new Complex32[inputSignal.Count];
             for (int i = 0; i < inputSignal.Count; i++)
@@ -46,7 +46,7 @@ namespace DataReciever
 
             // Perform FFT
             Fourier.Forward(complexSignal, FourierOptions.Matlab);
-
+            // Add this using directive at the top of your file
             // Return as List
             return new List<Complex32>(complexSignal);
         }
