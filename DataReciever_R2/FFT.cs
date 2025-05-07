@@ -51,10 +51,10 @@ namespace DataReciever
             return new List<Complex32>(complexSignal);
         }
 
-        public List<Complex32> GetComplex(List<double> inputSignal)
+        public async Task<List<Complex32>> GetComplexAsync(List<double> inputSignal) // Ensure this method is marked as async
         {
-             complexResult = this.Compute(inputSignal);
-             return complexResult;
+            complexResult = await Task.Run(() => Compute(inputSignal)); // 'await' is valid here because the method is async
+            return complexResult;
         }
 
         public List<double> GetMagnitudes(List<Complex32> complexResult)

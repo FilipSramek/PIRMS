@@ -27,6 +27,7 @@ namespace DataReciever
         CsvDriver csv = new CsvDriver();
         // Move the initialization of the Sender instance to the constructor
         Sender sender;
+        bool isRunning = false; // flag to prevent re-entrance
 
 
 
@@ -46,10 +47,14 @@ namespace DataReciever
             ChartTemporal.DrawDynamic(100, data.Value, data.TimeStamp.TimeOfDay.Ticks);  //data.Value jsou vibrace; ta druhá monstrozita je uločená časová značka přebedená na long
         }
 
-        private void timer1000_Tick(object sender, EventArgs e)
+        private async void timer1000_Tick(object sender, EventArgs e)
         {
+            if (isRunning) return; // skip if already running
+
+            isRunning = true;
             try
             {
+                // Do your async work here
                 Drawer ChartPhase = new Drawer { chart = chrtFreqSpacePhase };
                 Drawer ChartMagnitude = new Drawer { chart = chrtFreqSpaceMag };
 
@@ -57,35 +62,37 @@ namespace DataReciever
 
                 while (this.sender.ReceivedDataQueue.TryDequeue(out Data receivedData))
                 {
-                    circularQueue.Enqueue(receivedData);                            //nahraj poslední příchozí data do cirkulární fronty pro fft
-                    data = receivedData;                                            // aktualizuj podleslení příchozí data v globální prměnné
-                    txtDebug.Text = $"Received: {data.Value}\n";                    // zobraz poslední příchozí data
+                    circularQueue.Enqueue(receivedData);
+                    data = receivedData;
+                    txtDebug.Text = $"Received: {data.Value}\n";
                 }
-                // Load the current circularQueue into signal
-                signal = circularQueue.ToList().Select(data => data.Value).ToList();
-                //nahrání aktuálního circularqueue do signal
-                
 
-                complex = fft.GetComplex(signal);
-                magnitudeSpectrum = fft.GetMagnitudes(complex); //podle toho co budeme chtít počítat -> fáze nebo magnitudy
+                signal = circularQueue.ToList().Select(data => data.Value).ToList();
+
+                complex = await fft.GetComplexAsync(signal);
+                magnitudeSpectrum = fft.GetMagnitudes(complex);
                 phaseSpectrum = fft.GetPhases(complex);
+
                 ChartPhase.Clear();
                 ChartMagnitude.Clear();
+
                 if (phaseSpectrum != null)
                     ChartPhase.DrawStatic(10000, phaseSpectrum);
+
                 if (magnitudeSpectrum != null)
                     ChartMagnitude.DrawStatic(10000, magnitudeSpectrum);
-                else 
-                {
+                else
                     txtDebug.Text = "Magnitude spectrum is null.";
-                }
             }
-
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 txtDebug.Text = $"Error drawing chart: {ex.Message}";
             }
-      
+            finally
+            {
+                isRunning = false; // release lock
+            }
+
         }
 
         private void btnConnect_Click(object sender, EventArgs e)
