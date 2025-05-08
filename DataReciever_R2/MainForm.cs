@@ -14,7 +14,7 @@ using MathNet.Numerics.IntegralTransforms;
 
 namespace DataReciever
 {
-    public partial class MainForm: Form
+    public partial class MainForm : Form
     {
         Fft fft = new Fft();
 
@@ -40,17 +40,14 @@ namespace DataReciever
             InitializeComponent();
             sender = new Sender(serialPort2);
             ChartTemporal = new Drawer() { chart = chrtTimeSpace };
-            timer1000.Enabled = true;
-            timer100.Enabled = true;
-            timer1.Enabled = true;
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
-        {           
+        {
             while (this.sender.ReceivedDataQueue.TryDequeue(out Data receivedData))
             {
                 //circularQueueData.Enqueue(receivedData);
@@ -73,25 +70,21 @@ namespace DataReciever
                 Drawer ChartPhase = new Drawer { chart = chrtFreqSpacePhase };
                 Drawer ChartMagnitude = new Drawer { chart = chrtFreqSpaceMag };
 
-                
-
-                
-
                 //signal = circularQueue.ToList().Select(data => data.Value).ToList();
-                signal = circularQueueVal.ToList();
+                signal = circularQueueVal.ToList();                                         //2ms
 
-                complex = await fft.GetComplexAsync(signal);
-                magnitudeSpectrum = fft.GetMagnitudes(complex);
-                phaseSpectrum = fft.GetPhases(complex);
+                complex = await fft.GetComplexAsync(signal);                                //1900ms
+                magnitudeSpectrum = await fft.GetMagnitudesAsync(complex);                  //450ms
+                phaseSpectrum = await fft.GetPhasesAsync(complex);                          //5ms
 
-                ChartPhase.Clear();
-                ChartMagnitude.Clear();
+                await ChartPhase.ClearAsync();                                              //1300ms
+                await ChartMagnitude.ClearAsync();                                          //450m
 
                 if (phaseSpectrum != null)
-                    ChartPhase.DrawStatic(10000, phaseSpectrum);
+                    await ChartPhase.DrawStaticAsync(10000, phaseSpectrum);                 //105ms
 
                 if (magnitudeSpectrum != null)
-                    ChartMagnitude.DrawStatic(10000, magnitudeSpectrum);
+                    await ChartMagnitude.DrawStaticAsync(10000, magnitudeSpectrum);         //2700ms
                 else
                     txtDebug.Text = "Magnitude spectrum is null.";
             }
@@ -123,7 +116,7 @@ namespace DataReciever
                     txtDebug.Text = "Serial port is already open.";
                     return;
                 }
-                
+
                 serialPort2.PortName = "COM10";   //nahraď portName a boudRate z textBoxu, jen jsem si ulehčil debugobání
                 serialPort2.BaudRate = 921600;
                 serialPort2.Open();
@@ -131,9 +124,10 @@ namespace DataReciever
                 this.sender.AttachReceiver();
 
                 txtDebug.Text = $"Connected to {portName} at {921600} baud.\n";
-                                
-                timer100.Enabled = true;
+
                 timer1000.Enabled = true;
+                timer100.Enabled = true;
+                timer1.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -160,39 +154,27 @@ namespace DataReciever
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
-            Task.Run(() =>
+            try
             {
-                try
+                if (cycleCounter % 2 == 0 && queueVal.Count > 0 && queueTime.Count > 0)
                 {
-                    // Skip every other value by using a counter
-                    if (cycleCounter % 2 == 0 && queueVal.Count > 0 && queueTime.Count > 0)
-                    {
-                        double signalVal = queueVal.Dequeue();
-                        queueTime.Dequeue(); // Discard the time value since it's no longer needed
+                    double signalVal = queueVal.Dequeue();
+                    queueTime.Dequeue();
 
-                        // Safely update the chart on the UI thread
-                        this.Invoke((Action)(() =>
-                        {
-                            ChartTemporal.DrawDynamic(1000, signalVal, cycleCounter / 2); // Use cycleCounter/2 as the x-value
-                        }));
-                    }
-                    else
-                    {
-                        // Skip the current value
-                        if (queueVal.Count > 0) queueVal.Dequeue();
-                        if (queueTime.Count > 0) queueTime.Dequeue();
-                    }
-
-                    cycleCounter++; // Increment the counter
+                    ChartTemporal.DrawDynamic(100, signalVal, cycleCounter / 2);
                 }
-                catch
+                else
                 {
-                    this.Invoke((Action)(() =>
-                    {
-                        txtDebug.Text = "Něco se nepovedlo při vykreslování grafu v časové doméně";
-                    }));
+                    if (queueVal.Count > 0) queueVal.Dequeue();
+                    if (queueTime.Count > 0) queueTime.Dequeue();
                 }
-            });
+
+                cycleCounter++;
+            }
+            catch
+            {
+                txtDebug.Text = "Něco se nepovedlo při vykreslování grafu v časové doméně";
+            }
         }
     }
 }

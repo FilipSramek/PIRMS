@@ -74,6 +74,25 @@ namespace DataReciever
             return magnitudes;
         }
 
+        public async Task<List<double>> GetMagnitudesAsync(List<Complex32> complexResult)
+        {
+            if (complexResult == null)
+            {
+                return null;
+            }
+
+            return await Task.Run(() =>
+            {
+                List<double> magnitudes = new List<double>(complexResult.Count);
+                foreach (var c in complexResult)
+                {
+                    magnitudes.Add(c.Magnitude);
+                }
+                return magnitudes;
+            });
+        }
+
+
         public List<double> GetPhases(List<Complex32> complexResult)
         {
             if (complexResult == null)
@@ -87,5 +106,24 @@ namespace DataReciever
             }
             return phases;
         }
+
+        public async Task<List<double>> GetPhasesAsync(List<Complex32> complexResult)
+        {
+            if (complexResult == null)
+            {
+                return null;
+            }
+
+            return await Task.Run(() =>
+            {
+                List<double> phases = new List<double>(complexResult.Count);
+                foreach (var c in complexResult)
+                {
+                    phases.Add(c.Phase);
+                }
+                return phases;
+            });
+        }
+
     }
 }
