@@ -48,20 +48,39 @@ namespace DataReciever
         /// <param name="windowSize"></param>
         /// <param name="signal"></param>
         /// <param name="time"></param>
-        public void DrawDynamic(int windowSize, double signal, long time = 0)
+        public void DrawDynamic(int windowSize, double signal, long time)
         {
-            time++;
-            if (time > windowSize)
+            try
             {
-                chart.ChartAreas[0].AxisX.Minimum = time - windowSize;
-                chart.ChartAreas[0].AxisX.Maximum = time;
+                time++;
+                if (time > windowSize)
+                {
+                    chart.ChartAreas[0].AxisX.Minimum = time - windowSize;
+                    chart.ChartAreas[0].AxisX.Maximum = time;
+                }
+
+                // Check if the chart and series are properly initialized
+                if (chart == null)
+                {
+                    throw new InvalidOperationException("Chart is not initialized.");
+                }
+
+                if (chart.Series.Count == 0)
+                {
+                    throw new InvalidOperationException("No series found in the chart.");
+                }
+
+                chart.Series[0].Points.AddXY(time, signal);
+
+                while (chart.Series[0].Points[0].XValue < time - windowSize)
+                {
+                    chart.Series[0].Points.RemoveAt(0);
+                }
             }
-            
-            chart.Series[0].Points.AddXY(time, signal);
-            
-            while (chart.Series[0].Points[0].XValue < time - windowSize)
+            catch (Exception ex)
             {
-                chart.Series[0].Points.RemoveAt(0);
+                // Log the exception to help debug the issue
+                Console.WriteLine($"Error in DrawDynamic: {ex.Message}");
             }
         }
         /// <summary>

@@ -25,16 +25,24 @@ namespace DataReciever
         List<Data> dataList = new List<Data>();
         Data data = new Data();
         CsvDriver csv = new CsvDriver();
+        CircularQueue<Data> circularQueueData = new CircularQueue<Data>(10000);
+        CircularQueue<double> circularQueueVal = new CircularQueue<double>(10000);
+        Queue<double> queueVal = new Queue<double>();
+        Queue<DateTime> queueTime = new Queue<DateTime>();
         // Move the initialization of the Sender instance to the constructor
         Sender sender;
         bool isRunning = false; // flag to prevent re-entrance
-
-
+        Drawer ChartTemporal;
+        long cycleCounter = 0;
 
         public MainForm()
         {
             InitializeComponent();
             sender = new Sender(serialPort2);
+            ChartTemporal = new Drawer() { chart = chrtTimeSpace };
+            timer1000.Enabled = true;
+            timer100.Enabled = true;
+            timer1.Enabled = true;
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -42,9 +50,16 @@ namespace DataReciever
         }
 
         private void timer1_Tick(object sender, EventArgs e)
-        {
-            Drawer ChartTemporal = new Drawer() { chart = chrtTimeSpace };
-            ChartTemporal.DrawDynamic(100, data.Value, data.TimeStamp.TimeOfDay.Ticks);  //data.Value jsou vibrace; ta druhá monstrozita je uločená časová značka přebedená na long
+        {           
+            while (this.sender.ReceivedDataQueue.TryDequeue(out Data receivedData))
+            {
+                //circularQueueData.Enqueue(receivedData);
+                circularQueueVal.Enqueue(receivedData.Value);
+                data = receivedData;
+                queueVal.Enqueue(receivedData.Value);
+                queueTime.Enqueue(receivedData.TimeStamp);
+                txtDebug.Text = $"Received: {data.Value}\n";
+            }
         }
 
         private async void timer1000_Tick(object sender, EventArgs e)
@@ -58,16 +73,12 @@ namespace DataReciever
                 Drawer ChartPhase = new Drawer { chart = chrtFreqSpacePhase };
                 Drawer ChartMagnitude = new Drawer { chart = chrtFreqSpaceMag };
 
-                CircularQueue<Data> circularQueue = new CircularQueue<Data>() { Size = 10000 };
+                
 
-                while (this.sender.ReceivedDataQueue.TryDequeue(out Data receivedData))
-                {
-                    circularQueue.Enqueue(receivedData);
-                    data = receivedData;
-                    txtDebug.Text = $"Received: {data.Value}\n";
-                }
+                
 
-                signal = circularQueue.ToList().Select(data => data.Value).ToList();
+                //signal = circularQueue.ToList().Select(data => data.Value).ToList();
+                signal = circularQueueVal.ToList();
 
                 complex = await fft.GetComplexAsync(signal);
                 magnitudeSpectrum = fft.GetMagnitudes(complex);
@@ -147,5 +158,41 @@ namespace DataReciever
             txtDebug.AppendText($"Received: {data.Value}\n");
         }
 
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            Task.Run(() =>
+            {
+                try
+                {
+                    // Skip every other value by using a counter
+                    if (cycleCounter % 2 == 0 && queueVal.Count > 0 && queueTime.Count > 0)
+                    {
+                        double signalVal = queueVal.Dequeue();
+                        queueTime.Dequeue(); // Discard the time value since it's no longer needed
+
+                        // Safely update the chart on the UI thread
+                        this.Invoke((Action)(() =>
+                        {
+                            ChartTemporal.DrawDynamic(1000, signalVal, cycleCounter / 2); // Use cycleCounter/2 as the x-value
+                        }));
+                    }
+                    else
+                    {
+                        // Skip the current value
+                        if (queueVal.Count > 0) queueVal.Dequeue();
+                        if (queueTime.Count > 0) queueTime.Dequeue();
+                    }
+
+                    cycleCounter++; // Increment the counter
+                }
+                catch
+                {
+                    this.Invoke((Action)(() =>
+                    {
+                        txtDebug.Text = "Něco se nepovedlo při vykreslování grafu v časové doméně";
+                    }));
+                }
+            });
+        }
     }
 }

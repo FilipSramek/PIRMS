@@ -53,7 +53,9 @@ namespace DataReciever
 
         public async Task<List<Complex32>> GetComplexAsync(List<double> inputSignal) // Ensure this method is marked as async
         {
-            complexResult = await Task.Run(() => Compute(inputSignal)); // 'await' is valid here because the method is async
+            complexResult = await Task.Run(() => {
+                    return Compute(inputSignal);
+                }); // 'await' is valid here because the method is async
             return complexResult;
         }
 

@@ -8,15 +8,25 @@ namespace DataReciever
 {
     class CircularQueue<T>
     {
+        public CircularQueue(int size)
+        {
+            _size = size;
+        }
+
         private Queue<T> queue = new Queue<T>();
-        public int Size { get; set; }                   //definuje maximální velikost fronty než začne odhazovat nejstarší prvek ze skály
+
+
+        private readonly int _size;                 //definuje maximální velikost fronty než začne odhazovat nejstarší prvek ze skály
+        
+        public int Size { get { return _size; } }
+        
         /// <summary>
         /// Přidá pravek do fronty. Pokud fronta není plná prostě ho přidá, pokud fronta je plná udělá si místo tak že odhodí nejstarší prvek ze skály
         /// </summary>
         /// <param name="item"></param>
         public void Enqueue(T item)
         {
-            if (queue.Count >= Size)
+            if (queue.Count >= _size)
             {
                 queue.Dequeue();
             }
@@ -39,7 +49,16 @@ namespace DataReciever
         //už chápu co jsou to lambda výrazy -> udělám medodu uvnitř svoji třídy, ale mohu ji poslat dělat něco jiného co je definované v jiné metodě
 
         public T[] ToArray() => queue.ToArray();        //Vrátí frontu jako pole
-        public List<T> ToList() => queue.ToList();      //Vrátí frontu jako list
+        public List<T> ToList()
+        {
+            List<T> result = new List<T>();
+            foreach (T item in queue)
+            {
+                result.Add(item);
+            }
+            return result;
+        }
+
         public int Count => queue.Count;                //Vrátí velikost fronty
         public void Clear() => queue.Clear();           //Smaže celou frontu
     }
