@@ -107,7 +107,6 @@ namespace DataReciever
             {
                 isRunning = false; // release lock
             }
-
         }
 
         private void btnConnect_Click(object sender, EventArgs e)

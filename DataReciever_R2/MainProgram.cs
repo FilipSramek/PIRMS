@@ -18,5 +18,6 @@ namespace DataReciever
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
         }
+
     }
 }

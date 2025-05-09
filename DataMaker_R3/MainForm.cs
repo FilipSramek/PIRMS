@@ -46,12 +46,10 @@ namespace DataMaker_R3
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            foreach (Data data in dataList) // Takhle to být nemůže v tomto programu protože by to úplně zastavilo zbytek programu (v tom druhém to, ale takto být může)
-            {
-                this.sender.Send(data);         //TOTO MUSÍME OPRAVIT PROTOŽE PROGRAM DELÁ TOTO A NIC JINÉHO BĚHEM TOHO
-                txtDebug.Text = data.ToString();
-            }
+            
         }
+
+
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
@@ -73,11 +71,11 @@ namespace DataMaker_R3
                 serialPort1.PortName = portName;
                 serialPort1.BaudRate = baudRate;
                 serialPort1.Open();
-                timer1.Start();
+                
 
                 this.sender.AttachReceiver();
 
-                txtDebug.Text = /*$*/"Connected to {portName} at {baudRate} baud.\n";
+                txtDebug.Text = $"Connected to {portName} at {baudRate} baud.\n";
 
                 signal = csv.CsvToListDouble(txtFilePath.Text);
                 foreach (var value in signal) //Umělé generování dat tak, aby byla vždy přiřazena jedna časová značka
@@ -86,11 +84,32 @@ namespace DataMaker_R3
                 }
 
                 txtDebug.Text = "Data from csv was downloded\n";
+                timer1.Enabled = true; // Start timeru
             }
             catch (Exception ex)
             {
                 txtDebug.Text = $"Error connecting to serial port: {ex.Message}";
             }
+
+            Task.Run(() =>
+            {
+                foreach (Data data in dataList)
+                {
+                    if (data == null)
+                    {
+                        // Use Invoke with an Action delegate
+                        this.Invoke((Action)(() => txtDebug.Text = "Data is null"));
+                        return;
+                    }
+                    else
+                    {
+                        this.sender.Send(data);
+
+                        // Again, use Invoke with an Action
+                        this.Invoke((Action)(() => txtDebug.Text = data.ToString()));
+                    }
+                }
+            });
         }
         private void btnBrowseFile_Click(object sender, EventArgs e)
         {
@@ -100,6 +119,11 @@ namespace DataMaker_R3
             {
                 txtFilePath.Text = dialog.FileName;
             }
+        }
+
+        private void txtFilePath_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
