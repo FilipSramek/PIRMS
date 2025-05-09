@@ -38,8 +38,12 @@ namespace DataReciever
         public MainForm()
         {
             InitializeComponent();
-            sender = new Sender(serialPort2);
-            ChartTemporal = new Drawer() { chart = chrtTimeSpace };
+
+            if (!DesignMode) // poradil copilot aby som mohol načitať designer
+            {
+                sender = new Sender(serialPort2);
+                ChartTemporal = new Drawer() { chart = chrtTimeSpace };
+            }
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
