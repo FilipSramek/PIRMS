@@ -11,6 +11,8 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 using System.Windows.Forms.DataVisualization.Charting;
 using MathNet.Numerics;
 using MathNet.Numerics.IntegralTransforms;
+using System.IO.Ports;
+using System.Net.NetworkInformation;
 
 namespace DataReciever
 {
@@ -38,18 +40,23 @@ namespace DataReciever
         public MainForm()
         {
             InitializeComponent();
-
-            if (!DesignMode) // poradil copilot aby som mohol načitať designer
-            {
-                sender = new Sender(serialPort2);
-                ChartTemporal = new Drawer() { chart = chrtTimeSpace };
-            }
+            sender = new Sender(serialPort2);
+            ChartTemporal = new Drawer() { chart = chrtTimeSpace };
+        
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
+            string[] ports = SerialPort.GetPortNames();
+            cmbPort.Items.AddRange(ports);
+            if (ports.Length > 0) cmbPort.SelectedIndex = 0;
 
+            int[] baudRates = { 9600, 19200, 38400, 57600, 115200, 230400, 460800, 921600 };
+            foreach (var rate in baudRates)
+                cmbBaudRate.Items.Add(rate.ToString());
+            cmbBaudRate.SelectedItem = "921600";
         }
 
+        
         private void timer1_Tick(object sender, EventArgs e)
         {
             while (this.sender.ReceivedDataQueue.TryDequeue(out Data receivedData))
@@ -107,27 +114,33 @@ namespace DataReciever
         {
             try
             {
-                string portName = txtPort.Text;
-
-                /*if (!int.TryParse(txtBould.Text, out int baudRate)) //je důležité odkomentovat na to aby fungovalu uživatelské rozhraní
+                
+                if (!int.TryParse(cmbBaudRate.SelectedItem?.ToString(), out int baudRate))
                 {
-                    txtDebug.Text = "Invalid baud rate.";
+                    txtDebug.Text = "Neplatný baud rate.";
                     return;
-                }*/
+                }
 
-                if (serialPort1.IsOpen)
+                string portName = cmbPort.SelectedItem?.ToString();     //Pokud cmbPort.SelectedItem není null, tak se převede na string
+                if (string.IsNullOrEmpty(portName))
+                {
+                txtDebug.Text = "Prosím, vyberte sériový port.";
+                return;
+                }
+
+                if (serialPort2.IsOpen)
                 {
                     txtDebug.Text = "Serial port is already open.";
                     return;
                 }
 
-                serialPort2.PortName = "COM10";   //nahraď portName a boudRate z textBoxu, jen jsem si ulehčil debugobání
-                serialPort2.BaudRate = 921600;
+                serialPort2.PortName = portName;
+                serialPort2.BaudRate = baudRate;
                 serialPort2.Open();
 
                 this.sender.AttachReceiver();
 
-                txtDebug.Text = $"Connected to {portName} at {921600} baud.\n";
+                txtDebug.Text = $"Připojeno k {portName} na rychlosti {baudRate} baud.\n";
 
                 timer1000.Enabled = true;
                 timer100.Enabled = true;

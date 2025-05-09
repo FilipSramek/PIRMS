@@ -4,8 +4,10 @@ using System.Collections.Concurrent;
 using System.IO.Ports; // kvůli SerialPort
 using System.Windows.Forms;
 using DataMaker_r3;
+using DataMaker_R3;
+using DataReciever;
 
-namespace DataMaker_R3
+namespace DataReciever
 {
     public class Sender
     {
